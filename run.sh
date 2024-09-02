@@ -13,7 +13,7 @@
 
 set -e
 
-REPO=Grafana-Mikrotik
+REPO=prometheus-grafana
 ENV_FILE=${ENV_FILE:-.env}
 ENV_FILE_GF=${ENV_FILE_GF:-.grafana}
 ENV_FILE_PROMETHEUS=${ENV_FILE_PROMETHEU:-.prometheus}
@@ -85,7 +85,7 @@ help() {
 clone_git() {
 
     echo -e "${BLUE}Git cloning ${REPO}...${RESET}"
-    git clone --depth=1 https://github.com/IgorKha/${REPO}.git ||
+    git clone --depth=1 https://github.com/sorousheta/${REPO}.git ||
         {
             fmt_error "git clone of ${REPO} repo failed"
             exit 1
